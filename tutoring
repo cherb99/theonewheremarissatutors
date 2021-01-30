@@ -1,0 +1,969 @@
+<section class="extMenu5 menu" group="Menu" plugins="DropDown, TouchSwipe" always-top global once="menu">
+	<mbr-parameters>
+		<!-- Block parameters controls (Blue "Gear" panel) -->
+		<input type="checkbox" title="Show Logo" name="showLogo">
+		<input type="range" title="Logo Size" inline name="logoSize" min="3.8" max="8" step="0.1" value="3.8" condition="showLogo">
+		<input type="checkbox" title="Show Brand Name" name="showBrand" checked>
+		<input type="checkbox" title="Show Menu Items" name="showItems" checked>
+		<input type="checkbox" title="Show Icons" name="showIcons" checked>
+		<select title="Icons" name="iconsAmount" condition="showIcons">
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+		<input type="checkbox" title="Show Button(s)" name="showButtons" checked>
+		<input type="checkbox" title="Collapsed" name="collapsed" checked>
+		<input type="color" title="Hamburger Color" name="hamburgerColor" value="#000000">
+		<input type="color" title="Background Color" name="menuBgColor" value="#bbbbbb">
+		<!-- End block parameters -->
+	</mbr-parameters>
+
+
+	<nav class="navbar navbar-dropdown" mbr-class="{'navbar-fixed-top':sticky,
+                    'navbar-expand-lg':!collapsed,
+                    'collapsed':collapsed}">
+		<div class="navbar-brand">
+			<span mbr-if="showLogo" class="navbar-logo">
+				<a href="https://mobiri.se">
+					<img src="../_images/logo1.png" alt="Mobirise" mbr-style="{'height': logoSize + 'rem'}">
+				</a>
+			</span>
+			<span mbr-if="showBrand" mbr-buttons mbr-theme-style="display-5" class="pt-2 navbar-caption-wrap" data-toolbar="-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove"><a class="navbar-caption text-black" data-app-selector=".navbar-caption" href="https://mobiri.se" data-app-placeholder="Type Text">The One Where Marissa Tutors</a></span>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" mbr-if="showItems">
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul mbr-menu class="navbar-nav nav-dropdown" mbr-theme-style="display-4" mbr-class="{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}"><li class="nav-item"><a class="nav-link link text-info text-primary" href="index.html#top" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text" aria-expanded="false">
+						HOME</a></li>
+				<li class="nav-item">
+					<a class="nav-link link text-info text-primary" href="index.html#extShop2-i" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text" aria-expanded="false">SERVICES</a></li>
+				
+
+				<li class="nav-item"><a class="nav-link link text-info text-primary" href="index.html#testimonials1-m" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text" aria-expanded="false">ABOUT</a></li></ul>
+			<div class="icons-menu" mbr-if="showIcons">
+				<a href="index.html#Bookings" target="_blank">
+					<span mbr-icon class="p-2 mbr-iconfont socicon-googlecalendar socicon" style="color: rgb(4, 85, 231); fill: rgb(4, 85, 231);"></span>
+				</a>
+				<a href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 1">
+					<span mbr-icon class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+				</a>
+				<a href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 2">
+					<span mbr-icon class="p-2 mbr-iconfont mobi-mbri-globe-2 mobi-mbri" style="color: rgb(242, 246, 255); fill: rgb(242, 246, 255);"></span>
+				</a>
+				<a href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 3">
+					<span mbr-icon class="p-2 mbr-iconfont mobi-mbri-cash mobi-mbri" style="color: rgb(242, 246, 255); fill: rgb(242, 246, 255);"></span>
+				</a>
+				<a href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 4">
+					<span mbr-icon class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(242, 246, 255); fill: rgb(242, 246, 255);"></span>
+				</a>
+				<a href="https://mobiri.se" target="_blank" mbr-if="iconsAmount > 5">
+					<span mbr-icon class="p-2 mbr-iconfont mobi-mbri-alert mobi-mbri" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+				</a>
+			</div>
+			<div mbr-if="showButtons" mbr-buttons mbr-theme-style="display-4" class="navbar-buttons px-2 mbr-section-btn"><a class="btn btn-sm btn-secondary" href="mailto:marissa_jb5@hotmail.com" data-app-placeholder="Type Text">
+					CONTACT US
+				</a></div>
+		</div>
+	</nav>
+</section>
+<section class="header13" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{
+    'mbr-fullscreen': fullScreen,
+    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen" checked>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="6" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="6" condition="fullScreen == false">
+
+        <input type="range" inline name="textWidth" title="Width" min="4" max="12" value="10" step="1">
+        <select title="Align" name="contentAlign">
+            <option value>Left</option>
+            <option value="justify-content-center" selected>Center</option>
+            <option value="justify-content-end">Right</option>
+        </select>
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showSubitle">
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Buttons" name="showButtons">
+        <input type="checkbox" title="Social" name="showSocial" checked>
+        <input type="range" name="socialCount" title="Count" min="1" max="5" step="1" value="1" condition="showSocial">
+        <input type="color" title="Color" name="socialIconColor" value="#232323" condition="showSocial">
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/mbr-1920x1774.jpg" selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+    <div class="align-center" mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row {{contentAlign}}">
+            <div class="col-12 col-lg-{{textWidth}}">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3" data-app-selector=".mbr-section-title" mbr-theme-style="display-1" mbr-if="showTitle"><b>"The One Where</b><br><b> Marissa Tutors"</b></h1>
+                <h2 class="mbr-section-subtitle mbr-fonts-style mb-3" data-app-selector=".mbr-section-subtitle" mbr-theme-style="display-2" mbr-if="showSubitle">Header Subtitle</h2>
+                <p class="mbr-text mbr-fonts-style mb-3" mbr-theme-style="display-7" mbr-if="showText" data-app-selector=".mbr-text, .mbr-section-btn, .social-row">In a time of virtual classes and distanced learning “classroom” changes can impact a student’s
+ability to learn. I’m here to help students from JK-8 in all subjects and grades 9-12 in limited
+subjects. Students can book individual sessions or join with a max of 4 peers in the same grade studying
+the same subject.</p>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn mt-3" mbr-if="showButtons">
+                    <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">Create
+                        Your Website!</a>
+                </div>
+                <div class="social-row display-7 mt-5" mbr-if="showSocial">
+                    <div class="soc-item">
+                        <a href="http://www.facebook.com/groups/theonewheremarissatutors/" target="_blank">
+                            <span mbr-icon class="mbr-iconfont socicon-facebook socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="socialCount>1">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont socicon socicon-twitter"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="socialCount>2">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont socicon socicon-instagram"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="socialCount>3">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont socicon socicon-youtube"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="socialCount>4">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont socicon socicon-telegram"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content6" group="Content">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Width" name="fullWidth">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" name="textWidth" title="Width" min="4" max="12" value="10" step="1">
+        
+        <input type="color" name="lineColor" title="Color" value="#6592e6">
+        <header>Background</header>
+        <input type="color" title="Color" name="bgColor" value="#ffffff">
+    </mbr-parameters>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-{{textWidth}}">
+                <hr class="line">
+                <p class="mbr-text align-center mbr-fonts-style my-4" mbr-theme-style="display-5" data-app-selector=".mbr-text">Welcome to the area of the internet where learning can occur in a peaceful, productive, and
+even fun, manner!<br></p>
+                <hr class="line">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonials1" group="Testimonials" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" name="fullWidth" title="Full Width">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5">
+        <input type="range" name="textWidth" title="Width" min="4" max="8" step="1" value="6">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle">
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Name" name="showName" checked>
+        <input type="checkbox" title="Position" name="showPosition" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax selected>
+            <input type="color" title="Color" value="#ffffff">
+            <input type="video" title="Video" value="https://vimeo.com/428046504">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0" condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth}">
+        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4" mbr-if="showTitle" data-app-selector=".mbr-section-title" mbr-theme-style="display-2">
+            <b>Testimonials</b>
+        </h3>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-{{textWidth}}">
+                <div class="image-wrapper">
+                    <img src="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/140480350_417573499558284_8550340486163536682_n-152x225.jpg" alt="Mobirise">
+                </div>
+            </div>
+            <div class="col-12 col-md" mbr-class="{'col-lg-4' : fullWidth &amp;&amp; textWidth >= 6, 'col-lg-6' : fullWidth &amp;&amp; textWidth <= 5}">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style mb-4" mbr-if="showText" mbr-theme-style="display-7" data-app-selector=".mbr-text">Hello! I’m Marissa, and I am using my current experience as an Academic Technologist at
+Georgian College combined with my past education, to create an enjoyable learning experience
+for both students and parents alike. First, more about me… I graduated from The University of
+Western Ontario with an honours double major in Rehabilitation Science and Biological
+Anthropology with Archaeology. I then headed to Georgian College where I graduated with
+honours and became an Occupational Therapist and Physiotherapist Assistant (OTA&amp;PTA).
+Although my education may not directly align with your subject of interest, I can ensure my
+experience has molded me into a great student, which in turn, makes a good teacher.</p>
+                    <p class="name mbr-fonts-style mb-1" mbr-if="showName" mbr-theme-style="display-2" data-app-selector=".name">
+                        <b>Marissa&nbsp;</b></p>
+                    <p class="position mbr-fonts-style" mbr-if="showPosition" mbr-theme-style="display-4" data-app-selector=".position"><b>Your Tutor</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section group="Features" class="extFeatures popup-btn-cards" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax,'mbr-fullscreen': fullScreen}" plugins="mbr-popup-btns">
+
+    <mbr-parameters>
+    <!--Block parameters controls (Blue "Gear" panel) -->
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Show Arrow" name="showArrow" condition="fullScreen">
+        <input type="text" title="Link" name="linkValue" value="http://www.mobiri.se">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="15" step="1" value="1" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="15" step="1" value="1" condition="fullScreen == false">
+        <input type="range" inline title="Min Height" name="blockHeight" min="1" max="25" step="1" value="6" condition="fullScreen == false">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg" parallax>
+            <input type="color" title="Background Color" value="#86ecff" selected>
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#0455e7" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay&&bg.type !== 'color'">
+    <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <a class="full-link" href="{{linkValue}}"></a>
+    <div class="container-fluid card-wrapper">
+        <div class="row justify-content-center align-items-center" mbr-style="{'min-height':blockHeight + 'vw'}">
+             <div class="col-xl-10 col-lg-10 col-md-12 text-block">
+                <h2 mbr-if="showTitle" class="mbr-section-title mbr-fonts-style mbr-white mbr-bold" mbr-theme-style="display-2">TUTORING SERVICES</h2>                 
+             </div>
+        </div>
+    </div>
+</section>
+<section class="extShop featuresLink" group="Additional Blocks" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}" plugins="features-link">
+
+    <mbr-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="4">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="4">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="checkbox" title="Show Main Title" name="showmainTitle">
+        <input type="checkbox" title="Show Text" name="showText" checked>
+        <input type="checkbox" inline title="Show Text Animation" name="showAnimation" condition="showText&&!transparentBg" checked>
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <select title="Cards" name="cardsAmount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+        </select>
+        <input type="checkbox" title="Show Link" name="showLink" checked>
+        <input type="checkbox" title="Transparent" name="transparentBg" condition="showText || showTitle || showLink">
+        <input type="color" title="Color" name="CardBg" value="#ffffff" condition="!transparentBg&&(showText || showTitle || showLink)">
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg" parallax>
+            <input type="color" title="Background Color" value="#ffffff" selected>
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.8" condition="overlay&&bg.type !== 'color'">
+        <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container-fluid px-5': fullWidth, 'container px-3': !fullWidth}">
+        <h4 class="main-title pb-5 align-left mbr-regular mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showmainTitle" data-app-selector=".main-title">Modern Technologies</h4>
+
+        <div class="row justify-content-center">
+            <div class="card p-3 col-12 col-md-6" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img"><img src="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/mbr-1-598x423.jpeg" alt="Mobirise" title>
+                    </div>
+                    <div class="card-box align-left">
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text" mbr-class="{'pb-2': showTitle || showLink}">All ages and every subject&nbsp;</p>
+                        <h4 class="card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title">Elementary</h4>
+
+                        <h5 class="card-link mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showLink" data-app-selector=".card-link"><a href="#" class="text-primary" data-node-uid="988">$</a>20/hr</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6" mbr-if="cardsAmount > 1" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/mbr-13-598x399.jpeg" alt="Mobirise" title>
+                    </div>
+                    <div class="card-box align-left">
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text" mbr-class="{'pb-2': showTitle || showLink}">Academic &amp; Applied levels, 9-12<br data-node-uid="995"></p>
+                        <h4 class="card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title">HS Biology</h4>
+
+                        <h5 class="card-link mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showLink" data-app-selector=".card-link">$20/hr</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6" mbr-if="cardsAmount > 2" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/mbr-10-598x399.jpeg" alt="Mobirise">
+                    </div>
+                    <div class="card-box align-left">
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text" mbr-class="{'pb-2': showTitle || showLink}">Academic &amp; Applied levels</p>
+                        <h4 class="card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title">HS Geography</h4>
+
+                        <h5 class="card-link mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showLink" data-app-selector=".card-link"><a href="#" class="text-primary" data-node-uid="1007">$</a>20/hr</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6" mbr-if="cardsAmount > 3" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="file:///C:/Users/Cheryl/AppData/Local/Mobirise.com/Mobirise/projects/project-2021-01-19_182739/assets/images/mbr-11-598x399.jpeg" alt="Mobirise">
+                    </div>
+                    <div class="card-box align-left">
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text" mbr-class="{'pb-2': showTitle || showLink}">Academic &amp; Applied levels, 9-12</p>
+                        <h4 class="card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title">HS English</h4>
+
+                        <h5 class="card-link mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showLink" data-app-selector=".card-link"><a href="#" class="text-primary" data-node-uid="1016">$</a>20/hr</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="extInfo" group="Additional Blocks" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+    <!--Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="8" step="1" value="3">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="8" step="1" value="3">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubtitle">
+        <input type="checkbox" title="Gray Filter" name="grayFilter">
+        <input type="checkbox" title="Visa" name="showVisa">
+        <input type="checkbox" title="Master Card" name="showMasterCard">
+        <input type="checkbox" title="American Express" name="showAmericanExpress">
+        <input type="checkbox" title="Pay Pal" name="showPayPal">
+        <input type="checkbox" title="Diners Club" name="showDinersClub">
+        <input type="checkbox" title="Discover" name="showDiscover">
+        <input type="checkbox" title="Bitcoin" name="showBitcoin">
+        <input type="checkbox" title="Western Union" name="showWesternUnion">
+        <input type="checkbox" title="JCB" name="showJcb">
+        <input type="checkbox" title="Stripe" name="showStripe">
+        <input type="checkbox" title="Amazon" name="showAmazon">
+        <input type="checkbox" title="Ebay" name="showEbay">
+        <input type="checkbox" title="Union Pay" name="showUnionPay">
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg" parallax>
+            <input type="color" title="Background Color" value="#86ecff" selected>
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay&&bg.type !== 'color'">
+    <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12" mbr-if="showTitle || showSubtitle">
+                <h3 class="mbr-section-subtitle mbr-fonts-style pb-2 mbr-light align-center" mbr-theme-style="display-5" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle" mbr-class="{'pb-4':!showTitle}">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                <h2 class="align-center mbr-fonts-style mbr-section-title" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".mbr-section-title"><i>Payment completed via Interac E-Transfer to marissa_jb5@hotmail.com 
+</i><div><i>Please complete after you receive confirmation of booking.
+</i></div></h2>
+            </div>
+
+            <div class="col-12 col-md-12" mbr-class="{'pt-4':showTitle}">
+                <div class="row justify-content-center">
+                    <ul class="list-inline align-center">
+                        <li class="list-inline-item" mbr-if="showVisa">
+                            <img src="../_images/payments/visa.png" alt="Visa">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showMasterCard">
+                            <img src="../_images/payments/master-card.png" alt="Master Card">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showAmericanExpress">
+                            <img src="../_images/payments/american-express.png" alt="American Express">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showPayPal">
+                            <img src="../_images/payments/paypal.png" alt="Pay Pal">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showDinersClub">
+                            <img src="../_images/payments/diners-club.png" alt="Diners Club">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showDiscover">
+                            <img src="../_images/payments/discover.png" alt="Discover">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showBitcoin">
+                            <img src="../_images/payments/bitcoin.png" alt="Bitcoin">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showWesternUnion">
+                            <img src="../_images/payments/western-union.png" alt="Western Union">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showJcb">
+                            <img src="../_images/payments/jcb.png" alt="JCB">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showStripe">
+                            <img src="../_images/payments/stripe.png" alt="Stripe">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showAmazon">
+                            <img src="../_images/payments/amazon.png" alt="Amazon">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showEbay">
+                            <img src="../_images/payments/ebay.png" alt="Ebay">
+                        </li>
+                        <li class="list-inline-item" mbr-if="showUnionPay">
+                            <img src="../_images/payments/union-pay.png" alt="Union Pay">
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<img src="https://popcreative.co.nz/wp-content/uploads/sites/10/2017/07/6Artboard-32-1.png" data-appointlet-organization="theonewheremarissatutors"><script src="https://www.appointletcdn.com/loader/loader.min.js" async="" defer=""></script>
+<section class="extFeatures" group="Additional Blocks" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="2">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="2">
+        <input type="checkbox" title="Show Title" name="showmainTitle">
+        <input type="checkbox" title="Show Subtitle" name="showSubTitle">
+        <input type="checkbox" title="Show Card Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Card Text" name="showText" checked>
+        <input type="range" inline title="Icons Size" name="IconSize" min="1" max="5" step="0.5" value="3">
+        <input type="color" name="cardcolor" title="Card BG Color" value="#86ecff" selected>
+        <select title="Cards" name="cardsAmount">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../_images/background3.jpg" parallax>
+            <input type="color" title="Background Color" value="#ffffff" selected>
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=36YgDDJ7XSc">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7" condition="overlay&&bg.type !== 'color'">
+        <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+
+
+                <h1 class="mbr-section-title mbr-regular pb-3 align-center mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showmainTitle">Perfect Intergration</h1>
+                <h3 class="mbr-section-subtitle align-left align-center mbr-light pb-5 mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showSubTitle">Lorem ipsum dolor sit amet, con sectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+            </div>
+
+
+            <div class="card cardcolor p-3 col-12 col-md-6" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico1 socicon-facebook socicon" style="color: rgb(4, 85, 231); fill: rgb(4, 85, 231);"></span></a>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title align-left mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title">Facebook</h3>
+                        <h4 class="mbr-text align-left mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text">
+                            NEWS FEED</h4>
+                    </div>
+                    <div class="card-img">
+                        <a href="http://www.facebook.com/groups/theonewheremarissatutors/" target="_blank"><span mbr-icon class="mbr-iconfont ico2 mbrib-arrow-next" style="color: rgb(4, 85, 231); fill: rgb(4, 85, 231); font-size: 35px;"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardcolor p-3 col-12 col-md-6" mbr-if="cardsAmount > 1" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico1 socicon-vimeo socicon" style="color: rgb(85, 180, 212);"></span></a>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title align-left mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title"><a href="https://mobiri.se" class="text-warning">Vimeo</a></h3>
+                        <h4 class="mbr-text align-left mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text">
+                            VIDEO</h4>
+                    </div>
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico2 mobi-mbri-right mobi-mbri"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardcolor p-3 col-12 col-md-6" mbr-if="cardsAmount > 2" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico1 socicon-twitter socicon" style="color: rgb(20, 157, 204);"></span></a>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title align-left mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title"><a href="https://mobiri.se" class="text-warning">Twitter</a></h3>
+                        <h4 class="mbr-text align-left mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text">
+                            NEWS FEED</h4>
+                    </div>
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico2 mobi-mbri-right mobi-mbri"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardcolor p-3 col-12 col-md-6" mbr-if="cardsAmount > 3" mbr-class="{'col-lg-3': cardsAmount == '4',
+                             'col-lg-4': cardsAmount == '3'}">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico1 socicon-instagram socicon" style="color: rgb(255, 127, 159);"></span></a>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title align-left mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle" data-app-selector=".card-title"><a href="https://mobiri.se" class="text-warning">Instagram</a></h3>
+                        <h4 class="mbr-text align-left mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showText" data-app-selector=".mbr-text">
+                            PHOTO</h4>
+                    </div>
+                    <div class="card-img">
+                        <a href="https://mobiri.se"><span mbr-icon class="mbr-iconfont ico2 mobi-mbri-right mobi-mbri"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+<section class="mbr-section extForm" group="Additional Blocks" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+    <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="8" value="6">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="8" value="6">
+
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubtitle" checked>
+
+        <header>Style</header>
+        <input type="checkbox" name="customStyle" title="Custom Style" checked>
+        <input type="color" name="fieldColor" title="Field" value="#f5f5f5" condition="customStyle">
+        <input type="color" name="fieldHover" title="Field Hover" value="#f5f5f5" condition="customStyle">
+        <input type="color" name="borderColor" title="Border" value="#e8e8e8" condition="customStyle">
+        <input type="color" name="borderHover" title="Border Hover" value="#e8e8e8" condition="customStyle">
+        <input type="color" name="formText" title="Text" value="#656565" condition="customStyle">
+        <input type="color" name="formPlaceholder" title="Placeholders" value="#656565" condition="customStyle">
+        
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg" parallax selected>
+            <input type="color" title="Background Color" value="#86ecff">
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=E0Pa8tYo94U">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#4479d9" condition="overlay&&bg.type !== 'color'">
+        <input type="color" title="Overlay Color 2" name="overlayColor2" condition="overlay&&bg.type !== 'color'" value="#86ecff">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.6" condition="overlay&&bg.type !== 'color'">
+    <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-10 col-lg-8 block-content">
+                <div mbr-form>
+                    <!---Formbuilder Form--->
+                    <form action name="Mobirise Form" method="POST" class="mbr-form form-with-styler">
+                        <div class="form-row">
+                            <div hidden="hidden" data-form-alert class="alert alert-success col-12">
+                                Thanks for filling out the form!
+                            </div>
+                            <div hidden="hidden" data-form-alert-danger class="alert alert-danger col-12">
+                            </div>
+                        </div>
+                        <div class="dragArea form-row">
+                            <div class="col-md-12">
+                                <h2 mbr-theme-style="display-2" mbr-if="showTitle" class="mbr-fonts-style mbr-fonts-style mb-4">Contact Me</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <h3 mbr-theme-style="display-5" mbr-if="showSubtitle" class="mbr-fonts-style mbr-section-subtitle mbr-fonts-style mb-4 mbr-light">Have a question? Fill out this form and I will get back to you as soon as possible.</h3>
+                            </div>
+                            <div data-for="name" class="col-md-12  form-group">
+                                <input type="text" name="name" placeholder="Your Name" data-form-field="Name" mbr-theme-style="display-7" class="form-control input" required="required">
+                            </div>
+                            <div data-for="email" class="col-md-12  form-group">
+                                <input type="text" name="email" placeholder="Email" data-form-field="Email" mbr-theme-style="display-7" class="form-control input" required="required">
+                            </div>
+                            <div class="col-md-12  form-group" data-for="message">
+                                <textarea type="textarea" name="message" placeholder="Message" data-form-field="Message" mbr-theme-style="display-7" class="form-control input"></textarea>
+                            </div>
+                            <div class="col-md-12 input-group-btn mt-2" mbr-buttons="true" mbr-theme-style="display-4" data-toolbar="-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd"><a type="submit" class="btn btn-primary btn-form btn-bgr" data-app-placeholder="Type Text" href="mailto:marissa_jb5@hotmail.com">SEND MESSAGE</a></div>
+                        </div>
+                    </form><!---Formbuilder Form--->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="extAccordion" group="Additional Blocks" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{'mbr-parallax-background':bg.parallax}" plugins="mbr-switch-arrow">
+
+    <mbr-parameters>
+    <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="9" step="1" value="3">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="9" step="1" value="2">
+        <input type="checkbox" title="Text on Right/Left" name="reverseContent">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubtitle">
+        <input type="color" title="Accordion Color" name="accordionColor" value="#ffffff">
+        <input type="color" title="Panel Color" name="panelColor" value="#ffffff">
+        <select title="Accordions Count" name="bootstrapAccordion">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4" selected>4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+        </select>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg" parallax>
+            <input type="color" title="Background Color" value="#86ecff" selected>
+            <input type="video" title="Background Video" value="https://www.youtube.com/watch?v=l8UXhtqV6hU">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#eaeff9" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.8" condition="overlay&&bg.type !== 'color'">
+    <!-- End block parameters -->
+    </mbr-parameters>
+
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type!== 'color'" mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style mbr-bold" mbr-theme-style="display-2" mbr-if="showTitle" data-app-selector=".mbr-section-title">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+                <h3 class="mbr-section-subtitle pt-2 align-center mbr-light mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">
+                    LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPICISING ELIT. SED DO EIUSMOD
+                    TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.
+                </h3>
+            </div>
+        </div>
+        <div class="media-container-row pt-5">
+            <div class="col-md-6 content-block">
+            <div class="accordion-content">
+                <div id="bootstrap-accordion" class="panel-group accordionStyles accordion " role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">Bookings&nbsp; &nbsp;&nbsp;</h4>
+                                </a>
+                            </div>
+                            <div id="collapse1" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">
+                                       All bookings are completed through the website. Once booking is confirmed, payment is made through Interac E-transfer to marissa_jb5@hotmail.com (recipient is “Marissa J Buckland”)</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card" mbr-if="bootstrapAccordion > 1">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">Platform</h4>
+                                </a>
+                                
+                            </div>
+                            <div id="collapse2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">Zoom is the primary platform I will be using, however, CISCO WebEx and Microsoft Teams are also available. To request those platforms, simply send me a quick message through the “Contact Us” section.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card" mbr-if="bootstrapAccordion > 2">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">
+                                        Group Booking&nbsp;</h4>
+                                </a>
+                            </div>
+                            <div id="collapse3" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">If you would like to book a group tutoring session for students of <b>the same grade and subject</b>, there is a $15/hr <b>per student</b> premium with sessions consisting of 2-4 students.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card" mbr-if="bootstrapAccordion > 3">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">Payment</h4>
+                                </a>
+                            </div>
+                            <div id="collapse4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">
+                                       Please complete payments through Interac E-Transfer, payments through Paypal are also available upon request. Payment is due after you receive a confirmation email prior to the tutoring session. </p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card" mbr-if="bootstrapAccordion > 4">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">
+                                        Delivery
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapse5" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolorem, non. Sunt aliquam a odio, sapiente corporis necessitatibus quia assumenda expedita tempora error non deserunt beatae ex, eaque voluptatem quas.</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="card" mbr-if="bootstrapAccordion > 5">
+                            <div class="card-header" role="tab" id="headingSix">
+                                <a role="button" class="collapsed panel-title" data-toggle="collapse" data-core href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    <h4 class="mbr-fonts-style header-text" mbr-theme-style="display-7" data-app-selector=".header-text, .sign">
+                                        Order Issues
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="collapse6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                                <div class="panel-body p-4">
+                                    <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7" data-app-selector=".panel-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptates dolorem, odit enim! Aspernatur quos ipsa, sit! Repudiandae, laboriosam enim aliquam, similique suscipit quas dicta voluptate repellendus distinctio laborum at!</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6 content-block">
+                <h5 class="text-section-title pb-3 align-left mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".text-section-title">Hi All!!&nbsp;</h5>
+                <p class="text-section-text align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".text-section-text">Here are some commonly asked questions to guide you through the booking and tutoring process. If you need further clarification please refer to my Facebook page <i><a href="http://www.facebook.com/groups/theonewheremarissatutors/" class="text-primary" target="_blank">www.facebook.com/groups/theonewheremarissatutors/&nbsp;</a></i><br>or email marissa_jb5@hotmail.com.&nbsp;&nbsp;<br></p>
+        </div>
+    </div>
+    </div>         
+</section>
+<section class="extFooter" group="Additional Blocks" mbr-class="{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="15" step="1" value="8">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="15" step="1" value="0">
+        <input type="checkbox" title="Show Logo" name="showLogo">
+        <input type="color" title="Figure Color" name="svg1" value="#ffffff" selected>
+        <input type="color" title="Soc Icon BG Color" name="ico1" value="#ffffff" selected>
+        <input type="color" title="Quote Icon BG Color" name="ico2" value="#5580ff" selected>
+        <input type="checkbox" title="Show Buttons" name="showButtons">
+        <select title="Icons" name="iconsCount">
+            <option value="0">0</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <select title="Items" name="itemsCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+        </select>
+
+        <input type="checkbox" title="Reveal effect" name="reveal" checked>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="../../app/themes/mobirise5/components/_images/background1.jpg">
+            <input type="color" title="Background Color" value="#bbbbbb" selected>
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#232323" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.8" condition="overlay&&bg.type !== 'color'">
+        <!-- End block parameters -->
+    </mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}"></div>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1380px" height="760px" viewBox="0 0 1380 760" preserveAspectRatio="xMidYMid meet">
+        <defs id="svgEditorDefs">
+            <polygon id="svgEditorShapeDefs" style="fill:khaki;stroke:black;vector-effect:non-scaling-stroke;stroke-width:0px;"></polygon>
+        </defs>
+        <rect id="svgEditorBackground" x="0" y="0" width="1380" height="760" style="fill: none; stroke: none;"></rect>
+        <path d="M0.3577131120350206,0.819491525482845h-1.5000000000000355ZM0.3577131120350206,-3.1805084745172603h-1.5000000000000355ZM-0.14228688796500222,-4.180508474517258h5.000000000000002a5,5,0,0,1,0,6.00000000000003h-5.000000000000025a5,5,0,0,0,0,-6.00000000000003ZM5.8577131120349835,-1.1805084745172634h1.0000000000000249Z" style="fill:khaki; stroke:black; vector-effect:non-scaling-stroke;stroke-width:0px;" id="e2_shape" transform="matrix(1.01506 82.3743 -245.478 0.34062 392.311 526.125)"></path>
+    </svg>
+
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="media-wrap align-left" mbr-if="showLogo">
+                    <a href="https://mobiri.se/">
+                        <img src="../_images/logo2.png" alt="Mobirise">
+                    </a>
+                </div>
+
+                <p class="mbr-text align-left text1 mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".text1">
+                    Thank you for visiting. For request to join "The One Where Marissa Tutors" Facebook group for more details and direct communication please follow this link.</p>
+
+                <div class="social-list align-left" mbr-if="iconsCount > 0">
+                    <div class="soc-item" mbr-if="iconsCount>0">
+                        <a href="http://www.facebook.com/groups/theonewheremarissatutors/" target="_blank">
+                            <span mbr-icon class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="iconsCount>1">
+                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <span mbr-icon class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="iconsCount>2">
+                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="iconsCount>3">
+                        <a href="https://instagram.com/mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item" mbr-if="iconsCount>4">
+                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                            <span mbr-icon class="mbr-iconfont mbr-iconfont-social socicon-googleplus socicon" style="color: rgb(87, 70, 139); fill: rgb(87, 70, 139);"></span>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mbr-fonts-style" mbr-theme-style="display-4">
+                <h5 class="pb-3 align-left">
+                    Contact Info
+                </h5>
+
+
+                <div class="item" mbr-if="itemsCount > 0">
+                    <div class="card-img"><span mbr-icon class="mbr-iconfont img1 mobi-mbri-map-pin mobi-mbri"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="item-title align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".item-title">Simcoe County</h4>
+                    </div>
+                </div>
+
+                <div class="item" mbr-if="itemsCount > 1">
+                    <div class="card-img"><span mbr-icon class="mbr-iconfont img1 mobi-mbri-pin mobi-mbri"></span></div>
+                    <div class="card-box">
+                        <h4 class="item-title align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".item-title">Virtually Anywhere</h4>
+                    </div>
+                </div>
+
+                <div class="item" mbr-if="itemsCount > 2">
+                    <div class="card-img"><span mbr-icon class="mbr-iconfont img1 mobi-mbri-letter mobi-mbri"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="item-title align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".item-title">
+                            marissa_jb5@hotmail.com</h4>
+                    </div>
+                </div>
+
+                <div class="item" mbr-if="itemsCount > 3">
+                    <div class="card-img"><span mbr-icon class="mbr-iconfont img1 mobi-mbri-phone mobi-mbri"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="item-title align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".item-title">+1 (705) 888 - 7267</h4>
+                    </div>
+                </div>
+
+                <div class="item" mbr-if="itemsCount > 4">
+                    <div class="card-img"><span mbr-icon class="mbr-iconfont img1 mobi-mbri-phone mobi-mbri"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="item-title align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".item-title">+1 (0) 000 0000 001</h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mbr-fonts-style" mbr-theme-style="display-7">
+
+                <p class="mbr-text quote align-left mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".quote">
+                    "I'm looking forward to helping you learn and understand these topics amidst these difficult times"</p>
+
+                <div class="item">
+                    <div class="card-img2"><span mbr-icon class="mbr-iconfont ico2 socicon-seenthis socicon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span></div>
+                    <div class="card-box">
+                        <h4 class="theme align-left mbr-fonts-style" mbr-theme-style="display-7" data-app-selector=".theme">Marissa Buckland</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mbr-fonts-style" mbr-theme-style="display-7">
+                <h5 class="pb-3 align-left"><br>Editor &amp; Creator</h5>
+                <p class="mbr-text align-left text2 mbr-fonts-style" mbr-theme-style="display-4" data-app-selector=".text2">
+                    This website was made using Mobirise and designed and edited by Cheryl Buckland.&nbsp;</p>
+
+                <div class="mbr-section-btn align-left" mbr-if="showButtons" data-toolbar="-mbrBtnMove" mbr-buttons mbr-theme-style="display-4"><a class="btn btn-md btn-white-outline" href="https://mobiri.se" data-app-placeholder="Type Text" data-node-uid="1171"><span class="socicon socicon-play mbr-iconfont mbr-iconfont-btn" data-node-uid="1172"></span>Google Play</a></div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
